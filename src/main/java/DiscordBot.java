@@ -5,7 +5,6 @@ import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.interactions.commands.build.Commands;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 
-import java.io.IOException;
 import java.util.List;
 
 public class DiscordBot {
@@ -18,7 +17,7 @@ public class DiscordBot {
                 GatewayIntent.MESSAGE_CONTENT);
 
         try {
-            jda = JDABuilder.createDefault(borToken)
+            jda = JDABuilder.createLight(borToken)
                     .addEventListeners(new CommandListener())
                     .enableIntents(intents)
                     .build();

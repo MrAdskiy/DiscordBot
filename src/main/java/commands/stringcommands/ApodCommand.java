@@ -40,7 +40,7 @@ public class ApodCommand implements StringCommand {
                             + answers.getOrDefault("copyright", "") + " " + answers.getOrDefault("date", "") + "\n"
                             + answers.getOrDefault("title", "") + "\n"
                             + answers.getOrDefault("explanation", "") + "\n"
-                            + answers.getOrDefault("url", "")
+                            + answers.getOrDefault("hdurl", answers.getOrDefault("url", ""))
             ).queue();
         }
     }

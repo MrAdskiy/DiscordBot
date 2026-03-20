@@ -30,15 +30,7 @@ public class CommandListener extends ListenerAdapter {
 
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
-        // Проверяем имя команды
-        if (event.getName().equals("ping")) {
-            // Получаем аргумент (если есть)
-//            String name = event.getOption("имя") != null
-//                    ? event.getOption("имя").getAsString()
-//                    : event.getUser().getName();
-
-            // ОТВЕТ ТОЛЬКО ДЛЯ ОТПРАВИТЕЛЯ
-            // setEphemeral(true) делает сообщение видимым только для того, кто вызвал команду
+        if ("ping".equals(event.getName())) {
             event.reply("pong! 🤫 " + event.getJDA().getGatewayPing() + "ms")
                     .setEphemeral(true)
                     .queue();
