@@ -44,3 +44,4 @@ build/
 *.properties
 /data/
 /.mvn/
+/src/main/resources/
